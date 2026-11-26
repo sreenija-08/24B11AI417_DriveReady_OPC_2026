@@ -1,67 +1,66 @@
-# Agentic AI – Day 3
+# DriveReady OPC 2026 – Day 3
 
-## Overview
-This project focuses on building an AI-powered Sweets Shop Assistant using Google Gemini and LangChain. It demonstrates conversational memory, automated testing, and the creation of an AI agent.
+## Project: CampusMate – Agentic AI Student Assistant
 
-## Technologies Used
+**LLM:** Google Gemini 2.5 Flash
+
+### 1. Overview
+CampusMate is an Agentic AI student assistant developed using Google Gemini API and LangChain.
+
+This project extends the use cases implemented in Day-2 by introducing an AI agent that can understand student requests, select suitable tools, execute them, and provide responses.
+
+### 2. Features
+1. **Academic Question Answering:** Provides simple explanations for academic topics.
+2. **Student Query Classification:** Classifies student messages into predefined categories.
+3. **Study Plan Generation:** Creates personalized day-wise study plans.
+4. **Practice Quiz Generation:** Generates MCQs with answers and explanations.
+5. **Assignment Information Extraction:** Extracts assignment details in JSON format.
+6. **Study Hours Calculation:** Calculates total available study time.
+7. **AI Agent:** Selects and uses the appropriate tool based on the student's request.
+8. **Conversation History:** Maintains messages during the interaction session.
+
+### 3. Technologies Used
 - Python
-- Google Gemini API
-- Gemini 3.8 Flash
+- Google Gemini 2.5 Flash API
 - LangChain
+- LangChain Agent (`create_agent`)
+- Custom Tools
 - Google Colab
-- CSV
 
-## Tasks Implemented
+### 4. Installation
 
-### 1. Gemini LLM Setup
-- Installed and imported the required libraries.
-- Configured the Google API key.
-- Initialized the Gemini language model using LangChain.
+Install the required dependencies:
 
-### 2. Sweets Shop AI Assistant
-- Created a friendly AI assistant for a Sweets Shop.
-- Added product details and pricing:
-  - Gulab Jamun – ₹100
-  - Rasagulla – ₹150
-  - Kaju Katli – ₹200
-- Added business rules such as 24 hours' advance notice for orders.
-- Ensured short and friendly responses in English or Telugu.
+```bash
+pip install -U langchain-google-genai langchain-core langchain
+```
 
-### 3. Conversation Memory
-- Implemented conversation history.
-- Stored previous user questions and AI responses.
-- Enabled the assistant to remember customer details across multiple interactions.
-- Tested memory by asking for the customer's name.
+### 5. API Configuration
 
-### 4. Automated Testing Using CSV
-- Used CSV files to store test questions and expected keywords.
-- Created a testing function to check chatbot responses.
-- Compared AI responses with expected keywords.
-- Displayed PASS or FAIL results and the overall test score.
+Set your Google Gemini API key using:
 
-### 5. AI Agent Creation
-- Used LangChain's `create_agent()` function.
-- Created an AI agent using the Gemini model.
-- Configured the agent with the Sweets Shop system instructions.
-- Tested customer queries about delivery locations.
+- **Google Colab:** Add `GOOGLE_API_KEY` in the Secrets panel.
+- **Local System:** Set `GOOGLE_API_KEY` as an environment variable.
 
-## Learning Outcomes
-- Understanding Google Gemini integration.
-- Building AI assistants using LangChain.
-- Implementing conversational memory.
-- Performing automated chatbot testing.
-- Working with CSV files in Python.
-- Understanding AI agent creation.
-- Using system prompts to control AI behavior.
+### 6. How to Run
 
-## How to Run
-1. Open the Python notebook or script in Google Colab.
-2. Configure your Google Gemini API key.
-3. Install the required dependencies.
-4. Execute the code step by step.
-5. Test the sweets shop assistant with different questions.
-6. Run the automated CSV testing function.
-7. Test the AI agent with customer queries.
+Run the Python file:
 
-## Conclusion
-Day 3 focuses on developing an AI-powered Sweets Shop Assistant using Google Gemini and LangChain. It introduces conversational memory, automated testing, and AI agent creation, providing practical experience in building intelligent conversational applications.
+```bash
+python Day-3-CampusMate.py
+```
+
+Enter your request and CampusMate will use the available tools whenever required.
+
+Type `exit` to stop the application.
+
+### 7. Learning Outcomes
+- Understanding Agentic AI concepts.
+- Creating AI agents using LangChain.
+- Integrating Gemini API with an AI agent.
+- Implementing custom tools and tool calling.
+- Understanding how agents select and execute tools.
+- Building interactive AI applications.
+
+### 8. Conclusion
+CampusMate demonstrates how an AI application can be upgraded into an Agentic AI system. Instead of only generating responses, the agent can select and execute tools to complete different student-related tasks.
